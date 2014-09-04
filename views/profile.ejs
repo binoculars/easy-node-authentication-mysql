@@ -23,11 +23,11 @@
 			<div class="well">
 				<h3><span class="fa fa-user"></span> Local</h3>
 
-				<% if (user.local.email) { %>
+				<% if (user.username) { %>
 					<p>
-						<strong>id</strong>: <%= user._id %><br>
-						<strong>email</strong>: <%= user.local.email %><br>
-						<strong>password</strong>: <%= user.local.password %>
+						<strong>id</strong>: <%= user.id %><br>
+						<strong>username</strong>: <%= user.username %><br>
+						<strong>password</strong>: <%= user.password %>
 					</p>
 					
 					<a href="/unlink/local" class="btn btn-default">Unlink</a>
@@ -44,12 +44,12 @@
 				<h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
 
 				<!-- check if the user has this token (is the user authenticated with this social account) -->
-				<% if (user.facebook.token) { %>
+				<% if (user.facebook_token) { %>
 					<p>
-						<strong>id</strong>: <%= user.facebook.id %><br>
-						<strong>token</strong>: <%= user.facebook.token %><br>
-						<strong>email</strong>: <%= user.facebook.email %><br>
-						<strong>name</strong>: <%= user.facebook.name %><br>
+						<strong>id</strong>: <%= user.facebook_id %><br>
+						<strong>token</strong>: <%= user.facebook_token %><br>
+						<strong>email</strong>: <%= user.facebook_email %><br>
+						<strong>name</strong>: <%= user.facebook_name %><br>
 					</p>
 
 					<a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
@@ -67,12 +67,12 @@
 			<div class="well">
 				<h3 class="text-info"><span class="fa fa-twitter"></span> Twitter</h3>
 
-				<% if (user.twitter.token) { %>
+				<% if (user.twitter_token) { %>
 					<p>
-						<strong>id</strong>: <%= user.twitter.id %><br>
-						<strong>token</strong>: <%= user.twitter.token %><br>
-						<strong>display name</strong>: <%= user.twitter.displayName %><br>
-						<strong>username</strong>: <%= user.twitter.username %>
+						<strong>id</strong>: <%= user.twitter_id %><br>
+						<strong>token</strong>: <%= user.twitter_token %><br>
+						<strong>display name</strong>: <%= user.twitter_displayName %><br>
+						<strong>username</strong>: <%= user.twitter_username %>
 					</p>
 
 					<a href="/unlink/twitter" class="btn btn-info">Unlink</a>
@@ -88,12 +88,12 @@
 			<div class="well">
 				<h3 class="text-danger"><span class="fa fa-google-plus"></span> Google+</h3>
 
-				<% if (user.google.token) { %>
+				<% if (user.google_token) { %>
 					<p>
-						<strong>id</strong>: <%= user.google.id %><br>
-						<strong>token</strong>: <%= user.google.token %><br>
-						<strong>email</strong>: <%= user.google.email %><br>
-						<strong>name</strong>: <%= user.google.name %>
+						<strong>id</strong>: <%= user.google_id %><br>
+						<strong>token</strong>: <%= user.google_token %><br>
+						<strong>email</strong>: <%= user.google_email %><br>
+						<strong>name</strong>: <%= user.google_name %>
 					</p>
 
 					<a href="/unlink/google" class="btn btn-danger">Unlink</a>
